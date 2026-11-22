@@ -169,3 +169,4 @@ const button = (f, label, filled, w) => out(f, `<svg xmlns="http://www.w3.org/20
 button("btn-site.svg", "Product site · altair-hub", true, 270);
 button("btn-demo.svg", "Live demo business", false, 230);
 button("btn-video.svg", "Watch the 2-min demo", false, 240);
+button("btn-discovery.svg", "Book a free discovery session", true, 320);

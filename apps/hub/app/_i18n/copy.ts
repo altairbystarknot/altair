@@ -120,6 +120,18 @@ const es = {
     title: "Su Altair, *listo para vender.*",
     text: "Cuéntenos sobre su negocio. Revisamos cada solicitud y le enviamos el enlace para activar su sistema.",
   },
+  experimental: {
+    kicker: "Producto experimental",
+    title: "Altair es un *experimento.*",
+    text: "Nació en la Dojo AI Hackathon 2026 y hoy es un producto experimental: sirve para conocer la idea y probarla, pero no espere de él los resultados de un sistema en producción.",
+    customTitle: "¿Un negocio serio o una empresa establecida?",
+    customText: "Para operaciones reales, Starknot construye software a medida, cotizado por aparte, con el tamaño, la seguridad y la escalabilidad que su empresa necesita. Altair no llega a ese nivel ni pretende hacerlo.",
+    cta: "Agende una sesión de descubrimiento gratis",
+    note: "En starknot.co · por videollamada · le respondemos en 24 horas hábiles",
+    url: "https://www.starknot.co/es/contacto",
+    short: "Altair es un producto experimental. Si necesita un sistema a medida para su empresa,",
+    shortLink: "agende una sesión de descubrimiento gratis en starknot.co",
+  },
   home: {
     hero: {
       kicker: "Sistema de reservas para turismo",
@@ -646,6 +658,18 @@ const en: Dict = {
   closing: {
     title: "Your Altair, *ready to sell.*",
     text: "Tell us about your business. We review every request and send you the link to activate your system.",
+  },
+  experimental: {
+    kicker: "Experimental product",
+    title: "Altair is an *experiment.*",
+    text: "It was born at the Dojo AI Hackathon 2026 and today it is an experimental product: use it to understand the idea and try it, but do not expect the results of a production system from it.",
+    customTitle: "A serious business or an established company?",
+    customText: "For real operations, Starknot builds custom software, quoted separately, with the size, security and scalability your company needs. Altair does not reach that level and does not try to.",
+    cta: "Book a free discovery session",
+    note: "On starknot.co · by video call · we answer within 24 business hours",
+    url: "https://www.starknot.co/en/contacto",
+    short: "Altair is an experimental product. If you need custom software for your company,",
+    shortLink: "book a free discovery session on starknot.co",
   },
   home: {
     hero: {

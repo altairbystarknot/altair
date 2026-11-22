@@ -39,6 +39,10 @@ export default async function RequestPage({ params, searchParams }: Params) {
               </li>
             ))}
           </ol>
+          <p className="h-exp-short">
+            <span className="h-exp-dot" aria-hidden="true" />
+            {t.experimental.short} <a href={t.experimental.url} target="_blank" rel="noopener noreferrer">{t.experimental.shortLink}</a>.
+          </p>
         </div>
 
         <div className="h-formcard h-rise" style={{ animationDelay: "100ms" }}>

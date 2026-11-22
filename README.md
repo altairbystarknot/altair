@@ -17,6 +17,8 @@
   dos motores de precios, un panel para el equipo y un conector seguro para operar el negocio desde su propio Claude.</sub>
 </p>
 
+<p align="center"><sub><b>Experimental product</b> built for the Dojo AI Hackathon 2026 · <a href="#an-experimental-product">what that means</a> · custom software for real operations at <a href="https://www.starknot.co/en/contacto">starknot.co</a></sub></p>
+
 <img src=".github/readme/divider.svg" width="100%" alt="">
 
 ## See it in action
@@ -101,6 +103,20 @@ Next.js 16 · React 19 · TypeScript · Tailwind CSS v4 · Supabase (Postgres, A
 | `design/` | Design canvas source |
 | `docs/` | Documentation (Spanish) |
 | `core/` | **Not included**: Starknot's private core (pricing and booking engine, money rules, database and its tests) |
+
+## An experimental product
+
+> [!NOTE]
+> **Altair is an experimental product.** It was built in three days for the Dojo AI Hackathon 2026: use it to understand the idea and try it, but do not expect the results of a production system from it.
+
+Altair is **inspired by the logic, and backed by the team, behind a large-scale luxury travel platform** that Starknot built for a real operator in Costa Rica. It is **not** that platform: it is a far narrower, experimental version of that know-how, and it does not have its size or its scalability.
+
+For a serious operation or an established company, Starknot builds **custom software, quoted separately**, with the size, security and scalability the business needs.
+
+<p align="center">
+  <a href="https://www.starknot.co/en/contacto"><img src=".github/readme/btn-discovery.svg" height="44" alt="Book a free discovery session on starknot.co"></a>
+</p>
+<p align="center"><sub>Free · by video call · <a href="https://www.starknot.co/es/contacto">en español</a> · <a href="https://www.starknot.co/en/contacto">in English</a></sub></p>
 
 > [!IMPORTANT]
 > **Proprietary software, published for evaluation only** (see [LICENSE](LICENSE)). The private core is available only under a commercial agreement with [Starknot](https://www.starknot.co/en). Without it this repository does not build; use the live demo to try Altair.
