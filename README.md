@@ -109,7 +109,7 @@ Next.js 16 · React 19 · TypeScript · Tailwind CSS v4 · Supabase (Postgres, A
 > [!NOTE]
 > **Altair is an experimental product.** It was built in three days for the Dojo AI Hackathon 2026: use it to understand the idea and try it, but do not expect the results of a production system from it.
 
-Altair is **inspired by the logic, and backed by the team, behind a large-scale luxury travel platform** that Starknot built for a real operator in Costa Rica. It is **not** that platform: it is a far narrower, experimental version of that know-how, and it does not have its size or its scalability.
+Altair is **inspired by the logic, and backed by the team, behind a large-scale luxury travel platform** that Starknot built for a real operator in Costa Rica. It is **not** that platform: it is a far narrower, experimental version of that know-how, and it does not have its size or its scalability. Its user experience, design, panel features and engines are not that platform's either, which is a polished product in production: Altair was built in the three days of the hackathon, as well as possible, to show the idea.
 
 For a serious operation or an established company, Starknot builds **custom software, quoted separately**, with the size, security and scalability the business needs.
 

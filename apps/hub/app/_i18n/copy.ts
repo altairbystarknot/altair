@@ -123,7 +123,7 @@ const es = {
   experimental: {
     kicker: "Producto experimental",
     title: "Altair es un *experimento.*",
-    text: "Nació en la Dojo AI Hackathon 2026 y hoy es un producto experimental: sirve para conocer la idea y probarla, pero no espere de él los resultados de un sistema en producción.",
+    text: "Nació en tres días, en la Dojo AI Hackathon 2026, y hoy es un producto experimental: su experiencia, su panel y sus motores se hicieron lo mejor posible para mostrar la idea, no con el pulido de un sistema en producción. Pruébelo, pero no espere de él esos resultados.",
     customTitle: "¿Un negocio serio o una empresa establecida?",
     customText: "Para operaciones reales, Starknot construye software a medida, cotizado por aparte, con el tamaño, la seguridad y la escalabilidad que su empresa necesita. Altair no llega a ese nivel ni pretende hacerlo.",
     cta: "Agende una sesión de descubrimiento gratis",
@@ -662,7 +662,7 @@ const en: Dict = {
   experimental: {
     kicker: "Experimental product",
     title: "Altair is an *experiment.*",
-    text: "It was born at the Dojo AI Hackathon 2026 and today it is an experimental product: use it to understand the idea and try it, but do not expect the results of a production system from it.",
+    text: "It was built in three days at the Dojo AI Hackathon 2026 and today it is an experimental product: its experience, its panel and its engines were made as well as possible to show the idea, not with the polish of a production system. Try it, but do not expect those results from it.",
     customTitle: "A serious business or an established company?",
     customText: "For real operations, Starknot builds custom software, quoted separately, with the size, security and scalability your company needs. Altair does not reach that level and does not try to.",
     cta: "Book a free discovery session",
