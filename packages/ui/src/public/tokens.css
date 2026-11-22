@@ -1,0 +1,175 @@
+:root {
+  
+  --lg-color-ink: #0c1117;            
+  --lg-color-shell: #f7f1e6;          
+  --lg-color-cream: #fcf9f3;          
+  --lg-color-sand: #ebdcc1;           
+  --lg-color-dune: #cfae7d;           
+  --lg-color-sea-mist: #d2e1e4;       
+  --lg-color-smoke: #8b949c;          
+
+  
+  --lg-color-ocean-50:  #f3f7f9;
+  --lg-color-ocean-100: #e2ecf0;
+  --lg-color-ocean-200: #bfd5dd;
+  --lg-color-ocean-300: #8fb5c4;
+  --lg-color-ocean-500: #5a8aa0;
+  --lg-color-ocean-600: #3a6a86;
+  --lg-color-ocean-700: #0b3f4e;
+  --lg-color-ocean-800: #063449;
+  --lg-color-ocean-900: #002b42;
+  --lg-color-ocean-950: #0a1b2c;
+  --lg-color-ocean: var(--lg-color-ocean-800);        
+  --lg-color-ocean-deep: #002234;     
+  --lg-color-night: #001b2a;          
+  --lg-color-abyss: #00121d;          
+  --lg-color-teal: #1f5a6c;           
+  --lg-color-lagoon: #3c8d9c;         
+
+  
+  --lg-color-bark: #3a2a1e;
+  --lg-color-earth: #5b422e;
+
+  
+  --lg-color-amber: #e3a64d;          
+  --lg-color-gold: #dcb872;           
+  --lg-color-gold-soft: #ead3a3;
+  --lg-color-ember: #b8862f;          
+
+  
+  --lg-color-bg: var(--lg-color-shell);
+  --lg-color-fg: var(--lg-color-ink);
+  --lg-color-fg-muted: #5a5f66;
+  --lg-color-fg-on-dark: var(--lg-color-shell);
+  --lg-color-fg-on-dark-muted: rgba(247, 241, 230, 0.72);
+  --lg-color-accent: var(--lg-color-gold);
+  --lg-color-line: rgba(12, 17, 23, 0.1);
+  --lg-color-line-on-dark: rgba(247, 241, 230, 0.16);
+  --lg-color-focus: rgba(220, 184, 114, 0.75);
+
+  
+  --lg-glass-blur: 18px;
+  --lg-glass-blur-strong: 28px;
+  --lg-glass-saturate: 150%;
+  --lg-glass-bg-light: rgba(255, 255, 255, 0.14);
+  --lg-glass-bg-light-hover: rgba(255, 255, 255, 0.22);
+  --lg-glass-bg-dark: rgba(0, 24, 38, 0.42);
+  --lg-glass-bg-dark-hover: rgba(0, 24, 38, 0.5);
+  --lg-glass-bg-ocean: rgba(6, 52, 73, 0.42);
+  --lg-glass-border: rgba(255, 255, 255, 0.28);
+  --lg-glass-border-strong: rgba(255, 255, 255, 0.5);
+  --lg-glass-highlight: rgba(255, 255, 255, 0.6);
+  --lg-glass-shadow: 0 18px 50px -18px rgba(4, 12, 20, 0.55);
+  --lg-glass-inner: inset 0 1px 0 rgba(255, 255, 255, 0.45), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  --lg-glass-tint-gold: rgba(220, 184, 114, 0.22);   
+  --lg-glass-tint-ocean: rgba(60, 141, 156, 0.18);  
+
+  
+  --lg-font-display: "Cinzel", "Trajan Pro", "Cormorant Garamond", Georgia, serif;          
+  --lg-font-display-wide: "Archivo Black", "Arial Black", Impact, sans-serif;               
+  --lg-font-serif: "Cormorant Garamond", "Cormorant", Georgia, "Times New Roman", serif;    
+  --lg-font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;       
+
+  --lg-text-xs: 0.75rem;
+  --lg-text-sm: 0.875rem;
+  --lg-text-base: 1rem;
+  --lg-text-lg: 1.125rem;
+  --lg-text-xl: 1.375rem;
+  --lg-text-h3: clamp(1.5rem, 1.2rem + 1.2vw, 2.1rem);
+  --lg-text-h2: clamp(2rem, 1.4rem + 2.2vw, 3.25rem);
+  --lg-text-h1: clamp(2.5rem, 1.6rem + 3.6vw, 4.75rem);
+  --lg-text-display: clamp(2.6rem, 1.3rem + 5.2vw, 6.25rem);
+  --lg-text-glass-title: clamp(1.9rem, 1rem + 4vw, 5rem);
+
+  --lg-leading-tight: 1.02;
+  --lg-leading-snug: 1.15;
+  --lg-leading-body: 1.65;
+  --lg-tracking-display: 0.06em;
+  --lg-tracking-wide: 0.18em;
+  --lg-tracking-widest: 0.32em;
+  --lg-tracking-eyebrow: 0.28em;
+
+  
+  --lg-radius-xs: 6px;
+  --lg-radius-sm: 12px;
+  --lg-radius-md: 16px;
+  --lg-radius-lg: 24px;
+  --lg-radius-xl: 32px;
+  --lg-radius-2xl: 44px;
+  --lg-radius-pill: 999px;
+  --lg-radius-frame: 28px;   
+  --lg-radius-card: 40px;    
+  --lg-radius-story: 30px;   
+
+  
+  --lg-space-1: 0.25rem;
+  --lg-space-2: 0.5rem;
+  --lg-space-3: 0.75rem;
+  --lg-space-4: 1rem;
+  --lg-space-5: 1.5rem;
+  --lg-space-6: 2rem;
+  --lg-space-7: 3rem;
+  --lg-space-8: 4rem;
+  --lg-space-9: 6rem;
+  --lg-space-10: 8rem;
+  --lg-section-y: clamp(4rem, 3rem + 4vw, 7.5rem);
+  --lg-container: 1280px;
+  --lg-container-wide: 1440px;
+  --lg-gutter: clamp(1.25rem, 0.5rem + 3vw, 3rem);
+  --lg-card-w: clamp(280px, 26vw, 380px);          
+  --lg-fleet-card-w: clamp(300px, 26vw, 440px);    
+
+  
+  --lg-shadow-sm: 0 1px 2px rgba(12, 17, 23, 0.06), 0 6px 18px -8px rgba(12, 17, 23, 0.18);
+  --lg-shadow-md: 0 2px 4px rgba(12, 17, 23, 0.05), 0 18px 40px -16px rgba(12, 17, 23, 0.28);
+  --lg-shadow-lg: 0 30px 80px -30px rgba(4, 12, 20, 0.55);
+  --lg-shadow-frame: 0 40px 120px -30px rgba(4, 12, 20, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  --lg-shadow-card: 0 24px 60px -24px rgba(4, 12, 20, 0.45);
+
+  
+  --lg-ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  --lg-ease-glass: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --lg-duration-fast: 180ms;
+  --lg-duration: 420ms;
+  --lg-duration-slow: 900ms;
+  --lg-parallax-strength: 1; 
+
+  
+  --lg-z-bg: 0;
+  --lg-z-frame: 1;
+  --lg-z-content: 2;
+  --lg-z-foliage: 3;
+  --lg-z-nav: 4;
+}
+
+.lg-on-dark {
+  --lg-color-fg: var(--lg-color-fg-on-dark);
+  --lg-color-fg-muted: var(--lg-color-fg-on-dark-muted);
+  --lg-color-line: var(--lg-color-line-on-dark);
+  color: var(--lg-color-fg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --lg-parallax-strength: 0;
+    --lg-duration-fast: 1ms;
+    --lg-duration: 1ms;
+    --lg-duration-slow: 1ms;
+  }
+}
+
+:root {
+  --lg-font-display: var(--font-cinzel), "Cormorant Garamond", Georgia, serif;
+  --lg-font-serif: var(--font-serif), "Cormorant Garamond", Georgia, serif;
+  --lg-font-sans: var(--font-inter), Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+/* Each business's own colors (business_config.theme) drive the template. */
+.lg-root {
+  --lg-color-ocean-900: var(--brand, #002b42);
+  --lg-color-ocean-800: color-mix(in srgb, var(--brand, #002b42) 86%, #fff);
+  --lg-color-ocean-700: var(--brand-2, #0b3f4e);
+  --lg-color-night: color-mix(in srgb, var(--brand, #002b42) 72%, #000);
+  --lg-color-gold: var(--accent, #dcb872);
+  --lg-color-gold-soft: color-mix(in srgb, var(--accent, #dcb872) 62%, #fff);
+  --lg-color-accent: var(--lg-color-gold);
+}

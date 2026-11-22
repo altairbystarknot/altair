@@ -1,0 +1,30 @@
+.lg-torn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: var(--torn-h, 72px);
+  display: block;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 2;
+}
+.lg-torn--top { top: -1px; }
+.lg-torn--bottom { bottom: -1px; }
+.lg-torn--static { position: relative; }
+.lg-torn svg { width: 100%; height: 100%; display: block; overflow: visible; }
+
+.lg-torn-section { position: relative; isolation: isolate; }
+.lg-torn-section__bg { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+.lg-torn-section__bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.lg-torn-section__inner { position: relative; z-index: 1; }
+
+.lg-torn-panel { position: relative; isolation: isolate; color: var(--panel-fg, var(--lg-color-shell)); }
+.lg-torn-panel__rim, .lg-torn-panel__paper { position: absolute; inset: 0; }
+.lg-torn-panel__rim { background: rgba(255, 255, 255, 0.55); z-index: 0; filter: drop-shadow(0 10px 24px rgba(4, 12, 20, 0.16)); }
+.lg-torn-panel__paper { background: var(--panel-bg, var(--lg-color-ocean)); z-index: 1; }
+.lg-torn-panel__paper::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 45%); }
+.lg-torn-panel__content { position: relative; z-index: 2; padding: var(--panel-pad, clamp(1.5rem, 4vw, 3rem)); }
+
+.lg-torn-divider { position: relative; width: 100%; height: var(--divider-h, 112px); overflow: hidden; }
+.lg-torn-divider .lg-torn { position: absolute; }

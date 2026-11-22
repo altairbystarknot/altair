@@ -1,0 +1,98 @@
+.lg-hscroll--rail .lg-hscroll__track { --rail-top: 5.6rem; --rail-y: 2.9rem; padding-top: var(--rail-top, 6.5rem); align-items: flex-start; }
+.lg-hscroll__rail {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: var(--rail-y, 3.4rem);
+  height: 2px;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.35) 4%, rgba(255, 255, 255, 0.35) 96%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.25);
+}
+.lg-hscroll__rail i {
+  position: absolute;
+  inset: 0;
+  transform-origin: left;
+  transform: scaleX(0);
+  background: linear-gradient(90deg, var(--lg-color-gold), var(--lg-color-gold-soft));
+  box-shadow: 0 0 22px rgba(234, 211, 163, 0.55);
+}
+
+.lg-tl {
+  --tl-node: 14px;
+  position: relative;
+  width: var(--lg-card-w);
+  padding-top: var(--rail-top, 6.5rem);
+  margin-top: calc(-1 * var(--rail-top, 6.5rem));
+  color: #fff;
+}
+.lg-tl__year {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  margin: 0;
+  font: 500 clamp(0.95rem, 1.2vw, 1.3rem) / 1 var(--lg-font-display);
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--lg-color-gold-soft);
+  text-shadow: 0 2px 16px rgba(4, 12, 20, 0.5);
+  white-space: nowrap;
+}
+.lg-tl__node {
+  position: absolute;
+  left: 50%;
+  top: calc(var(--rail-y, 3.4rem) + 1px);
+  width: var(--tl-node);
+  height: var(--tl-node);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff 0%, var(--lg-color-gold-soft) 35%, var(--lg-color-gold) 100%);
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.16), 0 0 24px rgba(234, 211, 163, 0.7);
+}
+.lg-tl__stem {
+  position: absolute;
+  left: 50%;
+  top: calc(var(--rail-y, 3.4rem) + 1px);
+  width: 1px;
+  height: calc(var(--rail-top, 6.5rem) - var(--rail-y, 3.4rem) - 1px);
+  background: linear-gradient(180deg, rgba(234, 211, 163, 0.8), rgba(255, 255, 255, 0.12));
+}
+
+.lg-tl__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: clamp(1.4rem, 1.9vw, 2rem);
+  border-radius: var(--lg-radius-story);
+  min-height: var(--tl-card-h, 20rem);
+}
+.lg-tl__card .lg-glass__icon { margin-bottom: 0.2rem; }
+.lg-tl__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: calc(var(--lg-radius-story) - 12px);
+  overflow: hidden;
+  margin: -0.2rem 0 0.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.lg-tl__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.lg-tl__eyebrow { margin: 0; font: 500 var(--lg-text-xs) / 1 var(--lg-font-sans); letter-spacing: 0.3em; text-transform: uppercase; color: var(--lg-color-gold-soft); }
+.lg-tl__title { margin: 0; font: italic 500 clamp(1.5rem, 1.9vw, 2.1rem) / 1.08 var(--lg-font-serif); text-wrap: balance; }
+.lg-tl__body { margin: 0; font: 400 var(--lg-text-sm) / 1.6 var(--lg-font-sans); color: rgba(255, 255, 255, 0.86); text-wrap: pretty; }
+.lg-tl__meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin: auto 0 0; padding-top: 0.6rem; list-style: none; font: 500 var(--lg-text-xs) / 1 var(--lg-font-sans); letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255, 255, 255, 0.75); }
+.lg-tl__meta li { display: inline-flex; align-items: center; gap: 0.5em; }
+.lg-tl__meta svg { width: 1.1em; height: 1.1em; color: var(--lg-color-gold-soft); }
+
+.lg-tl--low { padding-top: calc(var(--rail-top, 6.5rem) + 1.8rem); }
+.lg-tl--low .lg-tl__stem { height: calc(var(--rail-top, 6.5rem) + 1.8rem - var(--rail-y, 3.4rem) - 1px); }
+
+.lg-tl--now .lg-tl__node { background: radial-gradient(circle at 35% 30%, #fff 0%, #fff 40%, var(--lg-color-gold-soft) 100%); box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.22), 0 0 36px rgba(255, 255, 255, 0.8); }
+.lg-tl--now .lg-tl__year { color: #fff; }
+
+@media (max-width: 767px) {
+  .lg-tl { width: min(80vw, 360px); }
+  .lg-tl--low { padding-top: var(--rail-top, 6.5rem); }
+  .lg-tl--low .lg-tl__stem { height: calc(var(--rail-top, 6.5rem) - var(--rail-y, 3.4rem) - 1px); }
+}

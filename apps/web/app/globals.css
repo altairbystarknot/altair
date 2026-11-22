@@ -1,0 +1,32 @@
+@import "tailwindcss";
+/* The Altair design system. In the components layer so Tailwind utilities can override it. */
+@import "../../../packages/ui/src/styles.css" layer(components);
+/* The public booking site template (sand pages, serif titles, glass controls, booking flows, calendar). */
+@import "../../../packages/ui/src/site.css" layer(components);
+/* Liquid-glass public template and booking engine (unlayered, like the template expects). */
+@import "../../../packages/ui/src/public.css";
+
+@theme {
+  --font-sans: var(--font-inter), Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-jetbrains), "JetBrains Mono", ui-monospace, Consolas, monospace;
+  --color-ink: #00121d;
+  --color-navy: #002b42;
+  --color-teal: #0b3f4e;
+  --color-steel: #5f7e8a;
+  --color-cyan: #9fbcc2;
+  --color-gold: #dcb872;
+  --color-amber: #e3a64d;
+  --color-ivory: #f4eee2;
+  --color-mute: #4b6772;
+  --color-mist: #f2f6f7;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  min-height: 100dvh;
+}
+

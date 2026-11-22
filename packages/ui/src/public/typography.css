@@ -1,0 +1,98 @@
+.lg-display {
+  margin: 0;
+  font: 500 var(--lg-text-display) / var(--lg-leading-tight) var(--lg-font-display);
+  letter-spacing: var(--lg-tracking-display);
+  text-transform: uppercase;
+}
+.lg-display--wide { font-family: var(--lg-font-display-wide); font-weight: 400; letter-spacing: -0.01em; }
+.lg-display--h1 { font-size: var(--lg-text-h1); }
+.lg-display--h2 { font-size: var(--lg-text-h2); }
+
+.lg-serif-title {
+  margin: 0;
+  font: italic 500 var(--lg-text-h2) / var(--lg-leading-snug) var(--lg-font-serif);
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+.lg-serif-title--h1 { font-size: var(--lg-text-h1); line-height: var(--lg-leading-tight); }
+.lg-serif-title--h3 { font-size: var(--lg-text-h3); }
+.lg-serif-title--upright { font-style: normal; font-weight: 600; }
+.lg-serif-title em { font-style: italic; color: var(--lg-color-gold); }
+
+.lg-eyebrow {
+  margin: 0;
+  font: 500 var(--lg-text-xs) / 1.2 var(--lg-font-sans);
+  letter-spacing: var(--lg-tracking-eyebrow);
+  text-transform: uppercase;
+  
+  color: var(--lg-color-fg-muted);
+  opacity: 1;
+}
+.lg-eyebrow--lined { display: inline-flex; align-items: center; gap: 0.9em; }
+.lg-eyebrow--lined::before, .lg-eyebrow--lined::after { content: ""; width: 2.4em; height: 1px; background: currentColor; opacity: 0.6; }
+.lg-eyebrow--gold { color: var(--lg-color-gold); opacity: 1; }
+.lg-on-dark .lg-eyebrow:not(.lg-eyebrow--gold) { color: currentColor; opacity: 0.8; }
+
+.lg-caps {
+  margin: 0;
+  font: 500 var(--lg-text-sm) / 1.2 var(--lg-font-display);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+.lg-caps--gold { color: var(--lg-color-gold); }
+.lg-caps--lg { font-size: var(--lg-text-xl); letter-spacing: 0.24em; }
+
+.lg-lead { margin: 0; font: 400 var(--lg-text-lg) / 1.65 var(--lg-font-sans); max-width: 60ch; text-wrap: pretty; }
+.lg-prose { font: 400 var(--lg-text-base) / var(--lg-leading-body) var(--lg-font-sans); max-width: 68ch; }
+.lg-prose > * + * { margin-top: 1em; }
+.lg-prose h2, .lg-prose h3 { font: italic 500 var(--lg-text-h3) / 1.2 var(--lg-font-serif); margin-top: 1.6em; }
+.lg-prose a { color: inherit; text-decoration: underline; text-underline-offset: 0.2em; text-decoration-color: var(--lg-color-gold); }
+
+.lg-glass-title {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  font: 400 min(var(--lg-text-glass-title), 6.4vw) / 1 var(--lg-font-display);
+  letter-spacing: var(--lg-tracking-widest);
+  text-transform: uppercase;
+  color: transparent;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.74) 42%, rgba(255, 255, 255, 0.95) 50%, rgba(234, 211, 163, 0.78) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 1px 1px rgba(4, 12, 20, 0.35)) drop-shadow(0 14px 28px rgba(4, 12, 20, 0.25));
+  padding-left: var(--lg-tracking-widest); 
+  white-space: nowrap;
+}
+.lg-glass-title::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  padding-left: inherit;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  z-index: 1;
+}
+.lg-glass-title::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  padding-left: inherit;
+  color: transparent;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0) 55%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  transform: translateY(-1px);
+  opacity: 0.9;
+  pointer-events: none;
+}
+.lg-glass-title--dark { background-image: linear-gradient(180deg, rgba(0, 27, 42, 0.95), rgba(0, 27, 42, 0.62) 45%, rgba(0, 27, 42, 0.9) 52%, rgba(6, 52, 73, 0.75)); filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.6)) drop-shadow(0 10px 20px rgba(4, 12, 20, 0.15)); }
+.lg-glass-title--dark::before { -webkit-text-stroke-color: rgba(0, 27, 42, 0.35); }
+.lg-glass-title--dark::after { background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 55%); }
+.lg-glass-title--wrap { white-space: normal; }
+.lg-glass-title--sm { font-size: clamp(1.25rem, 0.8rem + 2vw, 2.25rem); }
+
+.lg-section-header { display: flex; flex-direction: column; gap: 1rem; max-width: 62ch; }
+.lg-section-header--center { align-items: center; text-align: center; margin-inline: auto; }
+.lg-section-header--end { align-items: flex-end; text-align: right; margin-left: auto; }
+.lg-section-header .lg-lead { opacity: 0.85; }

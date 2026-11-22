@@ -1,0 +1,38 @@
+# Local env and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies and builds
+node_modules/
+.next/
+out/
+dist/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# Platforms
+.vercel/
+core/supabase/.temp/
+core/supabase/.branches/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local test accounts for the dev instance (never committed)
+*.local.json
+
+# Hub local data (sign-up requests in development)
+apps/hub/.data/
+
+# Starknot's proprietary core (pricing and booking engine, money rules, database). It lives in a
+# separate PRIVATE repository checked out here; it is never part of this public repository.
+/core/
+
+# Local assistant settings
+.claude/
+
+.vercel
+.env*

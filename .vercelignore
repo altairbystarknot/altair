@@ -1,0 +1,17 @@
+# What the Vercel CLI must NOT upload (the private core/ folder IS uploaded: the live app is built from it).
+node_modules
+**/node_modules
+**/.next
+.git
+core/.git
+.env
+.env.*
+**/.env
+**/.env.*
+!**/.env.example
+*.local.json
+**/*.local.json
+apps/hub/.data
+.claude
+design
+*.tsbuildinfo

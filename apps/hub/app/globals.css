@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@import "../../../packages/ui/src/styles.css" layer(components);
+/* Altair's own site (marketing pages and the request form). */
+@import "./hub.css" layer(components);
+/* Spatial Liquid Glass look of the marketing site (after hub.css: same layer, later wins). */
+@import "./vision.css" layer(components);
+
+@theme {
+  --font-sans: var(--font-inter), Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-jetbrains), "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  min-height: 100dvh;
+}

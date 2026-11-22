@@ -1,0 +1,36 @@
+Altair by Starknot — Proprietary Evaluation License
+Copyright (c) 2026 Starknot. All rights reserved.
+
+This repository and everything in it (source code, designs, documentation, images and other material,
+together the "Software") are the property of Starknot and are protected by copyright and other laws.
+The Software is published only so that it can be reviewed. Publication does not place it in the public
+domain and does not grant any open-source license.
+
+1. Permitted use. You may view the Software and run it on your own computer, without changes, solely to
+   evaluate it — for example as a judge or participant of the Dojo AI Hackathon (November 2026) or as a
+   prospective customer of Starknot. This permission is personal, non-exclusive, non-transferable and
+   revocable, and it ends when the evaluation ends.
+
+2. Prohibited use. Without a separate written license from Starknot you may not, in whole or in part:
+   (a) copy, reproduce or redistribute the Software, or publish it elsewhere;
+   (b) modify it, translate it, or create derivative works based on it;
+   (c) use it, or any part of its logic, design or data structures, to provide a product or service to
+       anyone, commercially or not, or to run a business's bookings, website or operations;
+   (d) sell, sublicense, rent, lease or lend it, or offer it as a hosted service;
+   (e) remove or alter this notice or any copyright, trademark or attribution in it;
+   (f) use the names "Altair" or "Starknot", or their logos, for anything other than referring to this
+       Software.
+
+3. Proprietary core. Parts of Altair (including its pricing and booking engine, money rules and database
+   design) are not included in this repository and are available only under a commercial agreement.
+
+4. No warranty. The Software is provided "as is", without warranty of any kind. Starknot is not liable for
+   any claim, damage or other liability arising from it or its use.
+
+5. Commercial licenses, partnerships and questions: https://www.starknot.co/en
+
+-------------------------------------------------------------------------------------------------------------
+Resumen en español: este código se publica solo para que pueda evaluarse. Puede verlo y probarlo en su
+computadora, sin modificarlo, únicamente para evaluarlo. Está prohibido copiarlo, modificarlo,
+redistribuirlo, usarlo comercialmente o para operar cualquier negocio sin una licencia escrita de
+Starknot. El núcleo de Altair no está en este repositorio. Licencias comerciales: https://www.starknot.co/en

@@ -1,0 +1,34 @@
+{
+  "name": "altair",
+  "private": true,
+  "description": "Altair by Starknot: installable booking engine for private transport and activities (one codebase, one dedicated instance per business).",
+  "packageManager": "npm@11.19.1",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "core/packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @altair/web",
+    "build": "npm run build -w @altair/web",
+    "start": "npm run start -w @altair/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:db": "node core/tooling/db-test/run.mjs",
+    "verify:gates": "node tooling/verify/server-action-gates.mjs",
+    "check": "npm run typecheck && npm run test && npm run verify:gates && npm run test:db",
+    "dev:claim-link": "node tooling/dev/claim-link.mjs",
+    "dev:totp": "node tooling/dev/totp.mjs",
+    "dev:hub": "npm run dev -w @altair/hub"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "typescript": "~5.9.3",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1"
+  }
+}
