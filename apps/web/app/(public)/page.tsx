@@ -8,13 +8,14 @@ import { getLocale } from "@/lib/public/locale";
 import { LanguageSwitch } from "./_site/SiteChrome";
 import { STOCK, siteNav, stockVehicle } from "./_site/nav";
 import { FleetCard } from "./_site/ui/Cards";
+import { Ribbon, PromiseItem, Wave } from "./_site/ui/Dividers";
 import { BookNowButton, GlassButton } from "./_site/ui/Glass";
 import { HeroSection } from "./_site/ui/HeroSection";
 import { ArrowRightIcon, CarIcon, ClockIcon, PinIcon, PlaneIcon, ShieldIcon, StarIcon, UsersIcon, WhatsAppIcon } from "./_site/ui/icons";
-import { FeatureList, Section } from "./_site/ui/Layout";
+import { Section } from "./_site/ui/Layout";
 import { Picture } from "./_site/ui/Picture";
 import { ServicePanel } from "./_site/ui/ServicePanel";
-import { TornPanel, TornSection } from "./_site/ui/Torn";
+import { TornSection } from "./_site/ui/Torn";
 import { Eyebrow, GlassTitle, Lead, SectionHeader, SerifTitle } from "./_site/ui/Typography";
 import type { ImageRef } from "./_site/ui/types";
 
@@ -53,6 +54,8 @@ export default async function HomePage() {
     : ["Lo que ve es lo que paga.", "Gente que conoce cada camino.", "Su reserva por escrito, al instante.", "Personas reales, respuestas rápidas."];
   const trustIcons = [<StarIcon key="s" />, <UsersIcon key="u" />, <ShieldIcon key="h" />, <ClockIcon key="c" />];
   const faq = siteFaq(config, site, locale, pickText(paymentInstructions, locale, "")).slice(0, 4);
+  // Words for the ribbons between sections: the business's own places, then its promises.
+  const places = [...new Set([...catalog.areas.filter((a) => a.kind !== "airport").map((a) => a.name), ...activities.map((a) => a.areaName).filter((x): x is string => Boolean(x))])].slice(0, 8);
 
   const services = [
     ...(config.features.transfers
@@ -100,6 +103,8 @@ export default async function HomePage() {
           </div>
         </Section>
       )}
+
+      {places.length > 0 && <Ribbon items={places} />}
 
       {vehicles.length > 0 && (
         <section id="vehiculos" className="lg-hscroll lg-on-dark site-fleet site-cv" aria-labelledby="vehiculos-title">
@@ -183,27 +188,31 @@ export default async function HomePage() {
         </Section>
       )}
 
-      <TornSection id="confianza" tone="shell" tornTop={{ tone: "night", shape: "soft", seed: "home-trust" }} tornBottom={{ tone: "night", shape: "wave", seed: "home-trust-b" }} aria-labelledby="confianza-title" className="site-cv">
-        <div className="lg-split">
-          <div className="lg-stack">
+      <Wave from={showActivities ? "var(--lg-color-night)" : "var(--lg-color-shell)"} to="var(--lg-color-cream)" />
+      <section id="confianza" className="site-promise site-cv" aria-labelledby="confianza-title">
+        <div className="site-promise__inner">
+          <div className="site-promise__media">
+            <div className="site-promise__frame"><Picture image={img(STOCK.about, STOCK.about, 1800, 1200)} alt="" sizes="(max-width: 899px) 92vw, 46vw" /></div>
+            <div className="site-promise__badge">
+              <span aria-hidden="true"><UsersIcon /></span>
+              <p><strong>{en ? "A local team" : "Un equipo local"}</strong><small>{config.name}</small></p>
+            </div>
+          </div>
+          <div className="site-promise__copy">
             <Eyebrow lined>{en ? `Why ${config.name}` : `Por qué ${config.name}`}</Eyebrow>
-            <SerifTitle as="h2" level="h1" id="confianza-title">{en ? "Travel " : "Viaje "}<em>{en ? "with peace of mind." : "con tranquilidad."}</em></SerifTitle>
+            <SerifTitle as="h2" level="h1" id="confianza-title">{en ? "Your trip, " : "Su viaje, "}<em>{en ? "in good hands." : "en buenas manos."}</em></SerifTitle>
             <Lead>{about}</Lead>
+            <ol className="site-promise__grid">
+              {trust.slice(0, 4).map((label, i) => <PromiseItem key={label} n={i + 1} icon={trustIcons[i]} title={label} sub={trustSub[i] ?? ""} />)}
+            </ol>
             <div className="lg-cluster">
               <BookNowButton href="/reservar" label={nav.labels.bookNow} tone="ocean" />
               <GlassButton tone="white" shape="soft" href="/nosotros">{nav.labels.about}</GlassButton>
             </div>
           </div>
-          <div className="site-trust-panels">
-            <TornPanel tone="ocean" sides={["right"]} depth={12} seed="trust-a" shape="swell" style={{ minHeight: 210 }}>
-              <FeatureList items={trust.slice(0, 2).map((label, i) => ({ icon: trustIcons[i], label, sub: trustSub[i] }))} />
-            </TornPanel>
-            <TornPanel tone="sand" sides={["left"]} depth={12} seed="trust-b" shape="flow" style={{ minHeight: 210 }}>
-              <FeatureList items={trust.slice(2, 4).map((label, i) => ({ icon: trustIcons[i + 2], label, sub: trustSub[i + 2] }))} />
-            </TornPanel>
-          </div>
         </div>
-      </TornSection>
+      </section>
+      <Wave from="var(--lg-color-cream)" to="var(--lg-color-night)" flip />
 
       {faq.length > 0 && (
         <Section id="preguntas" padding="default" tone="night" onDark container="default" aria-labelledby="preguntas-title" className="site-cv">
@@ -221,6 +230,8 @@ export default async function HomePage() {
           </div>
         </Section>
       )}
+
+      <Ribbon items={trust} tone="deep" />
 
       <Section id="contacto" padding="default" background={{ image: img(STOCK.sunset, STOCK.sunset), veil: "dark" }} onDark container="wide" aria-labelledby="contacto-title" className="site-cv site-contact">
         <SectionHeader align="center" eyebrow={en ? "Contact" : "Contacto"} glassTitle={en ? "Let's talk" : "Hablemos"} titleId="contacto-title" lead={en ? "A question about a route, a large group or a special date? Write to us and a person answers." : "¿Una ruta especial, un grupo grande o una fecha particular? Escríbanos y le responde una persona."} />

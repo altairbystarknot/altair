@@ -165,11 +165,41 @@
 }
 /* Each business's own colors (business_config.theme) drive the template. */
 .lg-root {
+  /* deep tones from the brand color */
   --lg-color-ocean-900: var(--brand, #002b42);
   --lg-color-ocean-800: color-mix(in srgb, var(--brand, #002b42) 86%, #fff);
   --lg-color-ocean-700: var(--brand-2, #0b3f4e);
+  --lg-color-ocean-950: color-mix(in srgb, var(--brand, #002b42) 80%, #000);
+  --lg-color-ocean-deep: color-mix(in srgb, var(--brand, #002b42) 82%, #000);
   --lg-color-night: color-mix(in srgb, var(--brand, #002b42) 72%, #000);
+  --lg-color-abyss: color-mix(in srgb, var(--brand, #002b42) 48%, #000);
+  --lg-color-teal: var(--brand-2, #1f5a6c);
+  --lg-color-lagoon: color-mix(in srgb, var(--brand-2, #0b3f4e) 70%, #fff);
+  --lg-color-ocean-600: color-mix(in srgb, var(--brand-2, #0b3f4e) 80%, #fff);
+  --lg-color-ocean-500: color-mix(in srgb, var(--brand-2, #0b3f4e) 62%, #fff);
+  --lg-color-ocean-300: color-mix(in srgb, var(--brand-2, #0b3f4e) 40%, #fff);
+  --lg-color-ocean-200: color-mix(in srgb, var(--brand-2, #0b3f4e) 24%, #fff);
+  --lg-color-ocean-100: color-mix(in srgb, var(--brand-2, #0b3f4e) 12%, #fff);
+  --lg-color-ocean-50: color-mix(in srgb, var(--brand-2, #0b3f4e) 5%, #fff);
+  --lg-color-sea-mist: color-mix(in srgb, var(--brand-2, #0b3f4e) 16%, #fff);
+  /* light neutrals from the theme's sand and paper */
+  --lg-color-shell: var(--sand, #f7f1e6);
+  --lg-color-cream: color-mix(in srgb, var(--sand, #f7f1e6) 55%, #fff);
+  --lg-color-sand: var(--paper, #ebdcc1);
+  --lg-color-dune: color-mix(in srgb, var(--accent, #dcb872) 45%, var(--paper, #ebdcc1));
+  --lg-color-fg-on-dark-muted: color-mix(in srgb, var(--sand, #f7f1e6) 72%, transparent);
+  --lg-color-line-on-dark: color-mix(in srgb, var(--sand, #f7f1e6) 16%, transparent);
+  /* the accent */
   --lg-color-gold: var(--accent, #dcb872);
   --lg-color-gold-soft: color-mix(in srgb, var(--accent, #dcb872) 62%, #fff);
+  --lg-color-amber: color-mix(in srgb, var(--accent, #dcb872) 88%, #000);
+  --lg-color-ember: color-mix(in srgb, var(--accent, #dcb872) 70%, #000);
   --lg-color-accent: var(--lg-color-gold);
+  --lg-color-focus: color-mix(in srgb, var(--accent, #dcb872) 75%, transparent);
+  /* glass tints */
+  --lg-glass-bg-dark: color-mix(in srgb, var(--lg-color-night) 42%, transparent);
+  --lg-glass-bg-dark-hover: color-mix(in srgb, var(--lg-color-night) 50%, transparent);
+  --lg-glass-bg-ocean: color-mix(in srgb, var(--lg-color-ocean-800) 42%, transparent);
+  --lg-glass-tint-gold: color-mix(in srgb, var(--accent, #dcb872) 22%, transparent);
+  --lg-glass-tint-ocean: color-mix(in srgb, var(--brand-2, #3c8d9c) 18%, transparent);
 }

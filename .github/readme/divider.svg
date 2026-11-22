@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 40" width="1280" height="40" role="img" aria-label=""><defs><linearGradient id="l" x1="0" x2="1"><stop offset="0" stop-color="#dcb872" stop-opacity="0"/><stop offset=".5" stop-color="#dcb872" stop-opacity=".9"/><stop offset="1" stop-color="#dcb872" stop-opacity="0"/></linearGradient></defs>
+<style>
+.rise{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.fade{animation:fade .7s ease both}@keyframes fade{from{opacity:0}to{opacity:1}}
+.float{animation:float 7s ease-in-out infinite}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.twinkle{transform-box:fill-box;transform-origin:center;animation:twinkle 5s ease-in-out infinite}
+@keyframes twinkle{0%,100%{transform:scale(1) rotate(0)}45%{transform:scale(1.12) rotate(45deg)}55%{transform:scale(1.12) rotate(45deg)}}
+.draw{stroke-dasharray:1;animation:draw 1.6s ease both}@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.sweep{animation:sweep 9s ease-in-out infinite}@keyframes sweep{0%{transform:translateX(-500px)}60%,100%{transform:translateX(1500px)}}
+.dot{animation:dot 2.4s ease-in-out infinite}@keyframes dot{0%,100%{opacity:.35}50%{opacity:1}}
+.pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.2s ease-out infinite}@keyframes pulse{0%{transform:scale(.6);opacity:.6}100%{transform:scale(2.2);opacity:0}}@media (prefers-reduced-motion:reduce){.rise,.fade,.draw{animation:none;opacity:1;stroke-dashoffset:0}.float,.twinkle,.sweep,.dot,.pulse{animation:none}.pulse{opacity:0}}</style><path d="M160 20 H 600 M680 20 H 1120" stroke="url(#l)" stroke-width="1.2"/><g transform="translate(628 8)"><path class="twinkle" fill="#dcb872" d="M12 0Q13.3 10.7 24 12Q13.3 13.3 12 24Q10.7 13.3 0 12Q10.7 10.7 12 0Z"/></g></svg>

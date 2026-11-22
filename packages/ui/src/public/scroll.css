@@ -19,7 +19,7 @@ html.lenis, html.lenis body { height: auto; }
 
 .lg-hscroll__logo { display: block; width: clamp(7.5rem, 10.5vw, 10.5rem); height: auto; margin: 0 auto 0.1rem; filter: drop-shadow(0 2px 6px rgba(4, 12, 20, 0.55)) drop-shadow(0 12px 28px rgba(4, 12, 20, 0.45)); }
 
-.lg-hscroll__bg-veil { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 18, 29, 0.06), rgba(0, 18, 29, 0.2) 60%, rgba(0, 18, 29, 0.34)); }
+.lg-hscroll__bg-veil { position: absolute; inset: 0; background: linear-gradient(180deg, color-mix(in srgb, var(--lg-color-abyss) 6%, transparent), color-mix(in srgb, var(--lg-color-abyss) 20%, transparent) 60%, color-mix(in srgb, var(--lg-color-abyss) 34%, transparent)); }
 .lg-hscroll__fog-top { position: absolute; left: 0; right: 0; top: 0; height: 42%; background: linear-gradient(180deg, var(--lg-color-sand) 0%, rgba(235, 220, 193, 0.55) 30%, rgba(235, 220, 193, 0) 100%); mix-blend-mode: screen; opacity: 0.85; }
 .lg-hscroll__fog-bottom { position: absolute; left: 0; right: 0; bottom: 0; height: 30%; background: linear-gradient(0deg, var(--lg-color-sand) 0%, rgba(235, 220, 193, 0) 100%); mix-blend-mode: screen; opacity: 0.6; }
 

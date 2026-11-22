@@ -3,7 +3,7 @@
 /* eslint-disable @next/next/no-img-element -- the business's logo comes from its own storage, already sized */
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useId, useRef, useState, type ReactNode } from "react";
+import { useEffect, useId, useRef, useState, type MouseEvent, type ReactNode } from "react";
 import { useCart } from "@/lib/public/cart-store";
 import type { PricedItem } from "@/lib/public/cart-types";
 import { GlassButton } from "./ui/Glass";
@@ -19,8 +19,15 @@ export type ChromeCopy = {
 
 /** The business's logo in the bar (or its name, set in the template's serif, when it has no logo). */
 function Brand({ name, logoUrl, href }: { name: string; logoUrl: string | null; href: string }) {
+  const path = usePathname();
+  // Already home: a link to the same page would do nothing, so bring the visitor back to the top instead.
+  const toTop = (e: MouseEvent) => {
+    if (path !== href) return;
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  };
   return (
-    <Link className="lg-brand" href={href} aria-label={name}>
+    <Link className="lg-brand" href={href} aria-label={name} onClick={toTop}>
       {logoUrl ? <img className="lg-brand__logo" src={logoUrl} alt="" /> : <span className="lg-wordmark__name lg-brand__text">{name}</span>}
     </Link>
   );

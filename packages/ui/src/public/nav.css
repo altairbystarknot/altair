@@ -14,7 +14,7 @@
 .lg-nav--fixed { position: fixed; }
 .lg-nav--static { position: relative; }
 .lg-nav--glass {
-  background: rgba(0, 24, 38, 0.32);
+  background: color-mix(in srgb, var(--lg-color-night) 32%, transparent);
   -webkit-backdrop-filter: blur(16px) saturate(150%);
   backdrop-filter: blur(16px) saturate(150%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);

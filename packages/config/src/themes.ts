@@ -10,6 +10,7 @@ export const THEME_PRESETS = {
   volcan: { label: "Volcán", brand: "#1f1d1b", brand2: "#3a2f2a", accent: "#ff7a3d", accentInk: "#2b0f02", sand: "#f4efe8", paper: "#e8ded2" },
   atardecer: { label: "Atardecer", brand: "#3d1f3a", brand2: "#7a2e4b", accent: "#f4a261", accentInk: "#331604", sand: "#f6efe8", paper: "#ecdccf" },
   arena: { label: "Arena", brand: "#3b3127", brand2: "#6b5843", accent: "#e9c46a", accentInk: "#2d2306", sand: "#f6f0e4", paper: "#ebdfc8" },
+  brisa: { label: "Brisa", brand: "#0d4a47", brand2: "#16766b", accent: "#ff7b5c", accentInk: "#2e0d05", sand: "#f2f8f5", paper: "#d9ece6" },
 } as const;
 
 export type ThemePresetId = keyof typeof THEME_PRESETS;

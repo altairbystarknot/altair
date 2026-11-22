@@ -22,10 +22,10 @@
 .lg-section__bg--fixed img { position: fixed; height: 100vh; }
 
 .lg-veil { position: absolute; inset: 0; pointer-events: none; }
-.lg-veil--dark { background: linear-gradient(180deg, rgba(0, 18, 29, 0.22), rgba(0, 18, 29, 0.4)); }
-.lg-veil--darker { background: rgba(0, 18, 29, 0.6); }
-.lg-veil--light { background: rgba(247, 241, 230, 0.72); }
-.lg-veil--sunset { background: linear-gradient(180deg, rgba(227, 166, 77, 0.08), rgba(58, 42, 30, 0.5)); }
+.lg-veil--dark { background: linear-gradient(180deg, color-mix(in srgb, var(--lg-color-abyss) 22%, transparent), color-mix(in srgb, var(--lg-color-abyss) 40%, transparent)); }
+.lg-veil--darker { background: color-mix(in srgb, var(--lg-color-abyss) 60%, transparent); }
+.lg-veil--light { background: color-mix(in srgb, var(--lg-color-shell) 72%, transparent); }
+.lg-veil--sunset { background: linear-gradient(180deg, color-mix(in srgb, var(--lg-color-amber) 8%, transparent), rgba(58, 42, 30, 0.5)); }
 .lg-fog { position: absolute; left: 0; right: 0; pointer-events: none; mix-blend-mode: screen; }
 .lg-fog--top { top: 0; height: 45%; background: linear-gradient(180deg, var(--lg-color-sand) 0%, rgba(235, 220, 193, 0.5) 35%, rgba(235, 220, 193, 0) 100%); }
 .lg-fog--bottom { bottom: 0; height: 40%; background: linear-gradient(0deg, var(--lg-color-sand) 0%, rgba(235, 220, 193, 0.5) 35%, rgba(235, 220, 193, 0) 100%); }
