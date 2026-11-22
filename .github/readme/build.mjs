@@ -150,13 +150,13 @@ ${t(48, 628, "Sample conversation on the demo business · the tool names are the
   const inst = (x, name, dl) => `<g class="rise" ${d(dl)}>${card(x, 40, 360, 300, 24)}
  ${t(x + 30, 88, name, `font-family:IS,Georgia,serif;font-size:32px;fill:${C.navy}`)}
  ${["Own database", "Own booking site", "Own domain"].map((r, i) => `<rect x="${x + 26}" y="${110 + i * 70}" width="308" height="56" rx="16" fill="#f7f4ec"/><rect x="${x + 42}" y="${124 + i * 70}" width="28" height="28" rx="8" fill="${C.navy}"/><rect x="${x + 50}" y="${132 + i * 70}" width="12" height="11" rx="3" fill="none" stroke="${C.gold}" stroke-width="2"/>${t(x + 84, 144 + i * 70, r, sans(17, 650, C.ink))}`).join("")}</g>`;
-  const ck = ["Two-step sign-in (TOTP) for every staff action", "Row Level Security with explicit grants", "The server recalculates every price", "272 database access checks, two grant modes"];
+  const ck = ["Two-step sign-in for every staff action", "Every table locked down", "The server recalculates every price", "272 automated access checks"];
   const body = `${inst(40, "Costa Brisa (demo)", .1)}${inst(460, "Your business", .3)}${inst(880, "The next one", .5)}
 <path class="draw" pathLength="1" ${d(1.1)} d="M420 56 V 324" stroke="${C.navy}" stroke-opacity=".25" stroke-width="2.5" stroke-dasharray=".02 .02"/>
 <path class="draw" pathLength="1" ${d(1.25)} d="M840 56 V 324" stroke="${C.navy}" stroke-opacity=".25" stroke-width="2.5" stroke-dasharray=".02 .02"/>
 <g class="rise" ${d(1.4)}>${t(640, 386, "Nothing is shared.", `font-family:ISI,Georgia,serif;font-style:italic;font-size:34px;fill:${C.goldDark}`, 'text-anchor="middle"')}</g>
 ${ck.map((c, i) => { const x = i % 2 ? 660 : 40, y = i < 2 ? 410 : 474; return `<g class="rise" ${d(1.6 + i * .15)}><rect x="${x}" y="${y}" width="580" height="52" rx="26" fill="#fff" stroke="${C.navy}" stroke-opacity=".08"/>${check(x + 30, y + 26, .85)}${t(x + 54, y + 32, c, sans(16, 650, C.navy))}</g>`; }).join("")}`;
-  out("instances.svg", svg(W, H, "One business, one instance: each business has its own database, booking site and domain; nothing is shared. Two-step sign-in, Row Level Security, server-side prices and 272 access checks.", "Secure by design", body));
+  out("instances.svg", svg(W, H, "One business, one instance: each business has its own database, booking site and domain; nothing is shared. Two-step sign-in, a locked-down database, server-side prices and 272 access checks.", "Secure by design", body));
 }
 
 // ------------------------------------------------------------------ divider + buttons

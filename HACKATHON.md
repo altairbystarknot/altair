@@ -26,9 +26,9 @@ database, site and domain — no data is shared between businesses.
 
 ## Built during the hackathon (Nov 20–22)
 
-- Architecture and security model: one dedicated instance per business; Row Level Security with explicit
-  grants on every table; guarded `SECURITY DEFINER` database doors with per-door secrets; two-step
-  sign-in (aal2) for every staff action; 272 database access checks run in two grant modes.
+- Architecture and security model: one dedicated instance per business, a locked-down database, two-step
+  sign-in for every staff action and 272 automated database access checks (design and code in the
+  private core).
 - The business instance (`apps/web`): public booking site (Spanish/English), transfer engine with map
   search and road routes (OpenStreetMap), activity engine with calendar and seats, cart and booking
   receipts; the owner's panel (bookings, dispatch, suppliers, rates, activities, payments, team, site and

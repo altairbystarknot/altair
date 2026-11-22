@@ -51,7 +51,7 @@
 The owner adds one connector to **their own Claude** (Settings → Connectors → `https://<their-domain>/mcp`) and signs in with their Altair account. From then on Claude can look up bookings, quote transfers, assign services, draft messages and propose catalog changes.
 
 - **Remote MCP server with OAuth 2.1**: discovery, dynamic registration, PKCE, rotating refresh tokens.
-- **One guarded database door per tool**: the token, its scope and the person's *current* role are checked in the database on every call, and every call is logged.
+- **Checked on every call**: the token, its scope and the person's *current* role are verified on every call, and every call is logged.
 - **Drafts, never money**: catalog changes arrive as drafts a person publishes. Claude never charges, refunds or moves money.
 - **No AI bill inside Altair**: Altair never calls an AI model and never stores Claude credentials. The owner brings the Claude they already use.
 
@@ -59,11 +59,12 @@ The owner adds one connector to **their own Claude** (Settings → Connectors �
 
 <img src=".github/readme/instances.svg" width="100%" alt="One business, one instance: own database, booking site and domain; nothing is shared.">
 
-- **One dedicated instance per business**: its own Supabase project, Vercel project and domain. There is no business id column anywhere: isolation is physical.
-- **Row Level Security with explicit grants** on every table; staff policies are paired with a restrictive two-step (aal2) policy.
-- **The public never writes tables directly**: bookings go through `SECURITY DEFINER` doors, each guarded by its own secret (only its SHA-256 is stored).
-- **The server recalculates every price**; the browser's figure is display only. Money is integer cents, append-only.
-- **272 database access checks** prove what anonymous visitors, half-signed-in users and each role can and cannot do, in two grant modes.
+- **One dedicated instance per business**: its own database, site and domain. Isolation is physical: no business can ever read another business's data.
+- **A locked-down database**: every table is protected, and every staff action requires two-step sign-in and the person's current role.
+- **Visitors never write data directly**, and **the server recalculates every price**: the browser's figure is display only.
+- **272 automated access checks** prove who can and cannot do what.
+
+The security design, the database and the pricing engines live in Starknot's private core.
 
 ## How a business starts
 
@@ -100,9 +101,8 @@ Next.js 16 · React 19 · TypeScript · Tailwind CSS v4 · Supabase (Postgres, A
 | `packages/config/` | Contracts: business settings, site, catalog drafts, sample data |
 | `packages/ui/` | Altair design system (CSS and components) |
 | `tooling/` | Static checks and development helpers |
-| `design/` | Design canvas source |
-| `docs/` | Documentation (Spanish) |
-| `core/` | **Not included**: Starknot's private core (pricing and booking engine, money rules, database and its tests) |
+| `docs/COMO-FUNCIONA.md` | How Altair works, in plain words (Spanish) |
+| `core/` | **Not included**: Starknot's private core (pricing and booking engines, money rules, database, security design, architecture notes and tests) |
 
 ## An experimental product
 

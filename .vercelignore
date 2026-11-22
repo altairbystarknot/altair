@@ -15,3 +15,4 @@ apps/hub/.data
 .claude
 design
 *.tsbuildinfo
+core/design
