@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://altair-hub.vercel.app"><img src=".github/readme/btn-site.svg" height="44" alt="Product site: altair-hub.vercel.app"></a>
   <a href="https://altair-demo.vercel.app"><img src=".github/readme/btn-demo.svg" height="44" alt="Live demo business: altair-demo.vercel.app"></a>
-  <a href="#see-it-in-action"><img src=".github/readme/btn-video.svg" height="44" alt="Watch the demo"></a>
+  <a href="https://youtu.be/c6Wl3vk9zDI"><img src=".github/readme/btn-video.svg" height="44" alt="Watch the demo"></a>
 </p>
 
 <p align="center">
@@ -32,7 +32,7 @@
   <img src=".github/readme/demo.gif" width="100%" alt="A traveler quotes a private transfer on the map, adds a tour with real seats and books; the team sees it in the panel.">
 </a>
 
-<p align="center"><sub>The demo business <b>Costa Brisa (demo)</b> runs on real Altair with <b>sample data</b>. Try it yourself at <a href="https://altair-demo.vercel.app">altair-demo.vercel.app</a>.</sub></p>
+<p align="center"><sub>The demo business <b>Costa Brisa (demo)</b> runs on real Altair with <b>sample data</b>. Try it yourself at <a href="https://altair-demo.vercel.app">altair-demo.vercel.app</a>, or <a href="https://youtu.be/c6Wl3vk9zDI">watch the 2-minute demo on YouTube</a>.</sub></p>
 
 ## What's inside
 
