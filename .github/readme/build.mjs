@@ -159,6 +159,35 @@ ${ck.map((c, i) => { const x = i % 2 ? 660 : 40, y = i < 2 ? 410 : 474; return `
   out("instances.svg", svg(W, H, "One business, one instance: each business has its own database, booking site and domain; nothing is shared. Two-step sign-in, a locked-down database, server-side prices and 272 access checks.", "Secure by design", body));
 }
 
+// ------------------------------------------------------------------ Altair Lite: the free demo anyone can try
+{ const W = 1280, H = 440;
+  const claudeMark = (x, y) => `<rect x="${x}" y="${y}" width="28" height="28" rx="8" fill="#d97757"/><path d="M${x + 14} ${y + 6}v16M${x + 6} ${y + 14}h16M${x + 8.5} ${y + 8.5}l11 11M${x + 19.5} ${y + 8.5}l-11 11" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/>`;
+  const body = `
+<g class="rise" ${d(.1)}><circle cx="80" cy="80" r="6" fill="${C.green}"/><circle class="pulse" cx="80" cy="80" r="6" fill="none" stroke="${C.green}" stroke-width="2"/>
+ ${t(96, 85, "FREE · NO SIGN-UP · OPEN SOURCE (MIT)", sans(13, 700, C.green, "letter-spacing:2.2px"))}</g>
+<g class="rise" ${d(.25)}>${t(72, 150, "Try it free:", sans(50, 720, C.navy, "letter-spacing:-1.6px"))}</g>
+<g class="rise" ${d(.4)}>${t(70, 214, "Altair Lite", `font-family:ISI,Georgia,serif;font-style:italic;font-size:68px;fill:${C.goldDark}`)}</g>
+<g class="rise" ${d(.6)}>${t(74, 262, "Open a demo tourism business, connect it to your own", sans(18, 500, C.ink))}${t(74, 288, "Claude in one minute and watch the panel change live.", sans(18, 500, C.ink))}
+ ${t(74, 316, "Pruébelo gratis con su propio Claude: sin registro, con datos de ejemplo.", sans(14.5, 500, C.soft))}</g>
+<g class="rise" ${d(.8)}><rect x="72" y="342" width="268" height="56" rx="28" fill="${C.navy}"/>${t(206, 376, "Open Altair Lite  →", sans(18, 650, "#fff"), 'text-anchor="middle"')}
+ ${t(360, 376, "altair-lite.vercel.app", `font:500 15px ${MONO};fill:${C.text}`)}</g>
+<g class="float"><g class="rise" ${d(.7)}>${card(748, 44, 460, 156)}
+ ${claudeMark(772, 66)}${t(812, 86, "Claude", sans(17, 700, C.navy))}
+ <rect x="1004" y="66" width="180" height="28" rx="14" fill="#eef6f0"/><circle cx="1022" cy="80" r="4.5" fill="${C.green}"/>${t(1034, 85, "Altair Lite · connected", sans(12, 650, "#24414c"))}
+ <rect x="912" y="110" width="272" height="38" rx="19" fill="${C.navy}"/>${t(1048, 135, "Raise Van rates 10% as a draft", sans(14.5, 600, "#fff"), 'text-anchor="middle"')}
+ <g class="fade" ${d(1.6)}><rect x="772" y="158" width="300" height="28" rx="14" fill="#f3f6f7"/>${t(786, 177, "Draft ready · waiting for you in the panel", sans(12.5, 600, C.navy))}</g></g></g>
+<path class="draw" pathLength="1" ${d(1.8)} d="M980 204 C 980 220, 960 226, 960 240" fill="none" stroke="${C.gold}" stroke-width="2" stroke-linecap="round" stroke-dasharray=".04 .04"/>
+<g class="float" style="animation-delay:-3.1s"><g class="rise" ${d(1.1)}>${card(700, 246, 508, 160)}
+ ${t(726, 280, "Panel · Costa Brisa (demo)", sans(15, 700, C.navy))}
+ <rect x="1112" y="262" width="72" height="26" rx="13" fill="#e6f6ea"/><circle cx="1128" cy="275" r="4" fill="${C.green}" class="dot"/>${t(1140, 280, "LIVE", sans(11.5, 750, "#22863a", "letter-spacing:1.4px"))}
+ <rect x="722" y="298" width="464" height="44" rx="12" fill="#fbf4e6"/>${t(740, 325, "Draft by Claude · Van rates +10%", sans(14, 650, C.ink))}
+ <rect x="1082" y="306" width="92" height="28" rx="14" fill="${C.navy}"/>${t(1128, 325, "Approve", sans(12.5, 650, "#fff"), 'text-anchor="middle"')}
+ <g class="fade" ${d(2.6)}><rect x="1082" y="306" width="92" height="28" rx="14" fill="#e6f6ea"/>${t(1128, 325, "Approved ✓", sans(12.5, 700, "#22863a"), 'text-anchor="middle"')}</g>
+ <rect x="722" y="350" width="464" height="40" rx="12" fill="#f3f6f7"/>${t(740, 375, "08:30 · SJO airport → La Fortuna", sans(13.5, 600, C.navy))}${t(1170, 375, "driver assigned", sans(12, 600, C.green), 'text-anchor="end"')}</g></g>
+${t(1208, 428, "Sample data", sans(11.5, 500, C.soft), 'text-anchor="end"')}`;
+  out("lite.svg", svg(W, H, "Try it free: Altair Lite. Open a demo tourism business, connect it to your own Claude in one minute and watch the panel change live. Free, no sign-up, open source (MIT). Open Altair Lite at altair-lite.vercel.app.", "Try it free · Altair Lite", body, SERIF + INTER));
+}
+
 // ------------------------------------------------------------------ divider + buttons
 out("divider.svg", `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 40" width="1280" height="40" role="img" aria-label=""><defs><linearGradient id="l" x1="0" x2="1"><stop offset="0" stop-color="${C.gold}" stop-opacity="0"/><stop offset=".5" stop-color="${C.gold}" stop-opacity=".9"/><stop offset="1" stop-color="${C.gold}" stop-opacity="0"/></linearGradient></defs>
 <style>${BASE_CSS}${REDUCED}</style><path d="M160 20 H 600 M680 20 H 1120" stroke="url(#l)" stroke-width="1.2"/><g transform="translate(628 8)"><path class="twinkle" fill="${C.gold}" d="${STAR}"/></g></svg>`);
@@ -166,7 +195,13 @@ const button = (f, label, filled, w) => out(f, `<svg xmlns="http://www.w3.org/20
 <rect x="1" y="1" width="${w - 2}" height="50" rx="25" fill="${filled ? C.navy : "#fff"}" stroke="${filled ? C.navy : "rgba(0,43,66,.18)"}" stroke-width="1.5"/>
 <path transform="translate(22 17) scale(.75)" fill="${C.gold}" d="${STAR}"/>
 <text x="${(w + 26) / 2}" y="32" text-anchor="middle" style="font:650 16px ${SANS};fill:${filled ? "#fff" : C.navy}">${esc(label)}</text></svg>`);
-button("btn-site.svg", "Product site · altair-hub", true, 270);
+// The free demo is the primary action: a live green dot instead of the star.
+out("btn-lite.svg", `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 52" width="290" height="52" role="img" aria-label="Try it free: Altair Lite">
+<style>.pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.2s ease-out infinite}@keyframes pulse{0%{transform:scale(.6);opacity:.6}100%{transform:scale(2.4);opacity:0}}@media (prefers-reduced-motion:reduce){.pulse{animation:none;opacity:0}}</style>
+<rect x="1" y="1" width="288" height="50" rx="25" fill="${C.navy}" stroke="${C.navy}" stroke-width="1.5"/>
+<circle cx="30" cy="26" r="5.5" fill="#3cc47a"/><circle class="pulse" cx="30" cy="26" r="5.5" fill="none" stroke="#3cc47a" stroke-width="2"/>
+<text x="158" y="32" text-anchor="middle" style="font:650 16px ${SANS};fill:#fff">Try it free · Altair Lite  →</text></svg>`);
+button("btn-site.svg", "Product site · altair-hub", false, 270);
 button("btn-demo.svg", "Live demo business", false, 230);
 button("btn-video.svg", "Watch the 2-min demo", false, 240);
 button("btn-discovery.svg", "Book a free discovery session", true, 320);

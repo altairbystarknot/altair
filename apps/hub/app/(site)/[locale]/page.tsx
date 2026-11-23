@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Icon } from "@altair/ui";
 import { ConvoBookings } from "../../_components/convo";
 import { Closing } from "../../_components/closing";
+import { DemoButton } from "../../_components/demo-button";
 import { Film } from "../../_components/film";
 import { Layered } from "../../_components/layered";
 import { Hero3D } from "../../_components/fx/hero-3d";
@@ -52,8 +53,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
               <Link className="btn tint lg" href={href(locale, "request")}>
                 {t.common.request} <Icon name="arrowRight" size={18} />
               </Link>
-              <Link className="h-glassbtn" href={href(locale, "how")}>
-                {t.common.how}
+              <DemoButton locale={locale} />
+              <Link className="h-arrow" href={href(locale, "how")}>
+                {t.common.how} <Icon name="arrowRight" size={16} />
               </Link>
             </div>
           </div>

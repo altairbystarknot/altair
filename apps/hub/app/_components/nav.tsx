@@ -17,6 +17,8 @@ export type NavProps = {
   langLabel: string;
   links: NavLink[];
   cta: NavLink;
+  /** The free demo (Altair Lite), always visible beside the request button. */
+  demo: NavLink & { short: string; full: string; aria: string };
 };
 
 const LANGS = [
@@ -47,7 +49,7 @@ function LangSwitch({ locale, path, label }: { locale: string; path: string; lab
 }
 
 /** Floating Liquid Glass navigation: links on desktop, a menu on phones, language switch on both. */
-export function HubNav({ locale, homeHref, homeText, homeLabel, mainLabel, menuLabel, langLabel, links, cta }: NavProps) {
+export function HubNav({ locale, homeHref, homeText, homeLabel, mainLabel, menuLabel, langLabel, links, cta, demo }: NavProps) {
   const path = usePathname() ?? homeHref;
   const menu = useRef<HTMLDetailsElement>(null);
   useEffect(() => {
@@ -69,6 +71,11 @@ export function HubNav({ locale, homeHref, homeText, homeLabel, mainLabel, menuL
         </div>
         <div className="h-navend">
           <LangSwitch locale={locale} path={path} label={langLabel} />
+          <a className="h-demopill" href={demo.href} target="_blank" rel="noopener noreferrer" aria-label={demo.aria}>
+            <span className="h-demodot" aria-hidden="true" />
+            <span className="h-demopill-long">{demo.label}</span>
+            <span className="h-demopill-short" aria-hidden="true">{demo.short}</span>
+          </a>
           <Link className="btn tint sm h-navcta" href={cta.href} aria-current={on(cta.href) ? "page" : undefined}>
             {cta.label}
           </Link>
@@ -88,6 +95,11 @@ export function HubNav({ locale, homeHref, homeText, homeLabel, mainLabel, menuL
               <Link className="btn tint" href={cta.href}>
                 {cta.label}
               </Link>
+              <a className="h-demobtn h-menudemo" href={demo.href} target="_blank" rel="noopener noreferrer" aria-label={demo.aria}>
+                <span className="h-demodot" aria-hidden="true" />
+                <span className="h-demobtn-txt"><b>{demo.full}</b></span>
+                <Icon name="arrowRight" size={16} />
+              </a>
             </div>
           </details>
         </div>

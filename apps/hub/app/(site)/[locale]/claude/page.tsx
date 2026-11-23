@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Icon } from "@altair/ui";
 import { Closing } from "../../../_components/closing";
 import { ConvoBookings, ConvoDraft } from "../../../_components/convo";
+import { DemoButton } from "../../../_components/demo-button";
 import { Rich } from "../../../_components/rich";
 import { dict, href, isLocale } from "../../../_i18n/copy";
 
@@ -37,6 +38,7 @@ export default async function ClaudePage({ params }: Params) {
               <Link className="btn tint lg" href={href(locale, "request")}>
                 {t.common.request} <Icon name="arrowRight" size={18} />
               </Link>
+              <DemoButton locale={locale} />
               <a className="h-arrow" href="#herramientas">
                 {c.tools.kicker} <Icon name="arrowRight" size={16} />
               </a>

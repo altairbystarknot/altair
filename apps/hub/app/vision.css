@@ -20,6 +20,8 @@
   --v-line-2: rgba(0, 43, 66, 0.14);
   --v-gold: #9c7535;
   --v-gold-grad: linear-gradient(100deg, #c39b55 0%, #a47630 48%, #c7a05c 100%);
+  --v-live: #1f9b6e;
+  --v-live-ring: rgba(31, 155, 110, 0.2);
   --v-edge: 0 0 0 1px rgba(0, 43, 66, 0.065);
   --v-shadow: 0 1px 2px rgba(0, 30, 50, 0.04), 0 22px 44px -30px rgba(0, 30, 50, 0.22);
   --v-shadow-lg: 0 2px 6px rgba(0, 30, 50, 0.04), 0 60px 100px -56px rgba(0, 30, 50, 0.38);
@@ -504,3 +506,38 @@
 .h-exp-lite b { color: var(--navy); font-size: 15.5px; }
 .h-exp-lite span { color: var(--v-text); font-size: 14.5px; line-height: 1.55; }
 .h-exp-lite .h-glassbtn { align-self: flex-start; margin-top: 6px; }
+
+/* ---------- the free demo (Altair Lite), beside every request button ---------- */
+.h-demodot { position: relative; flex: none; width: 9px; height: 9px; border-radius: 50%; background: var(--v-live); box-shadow: 0 0 0 4px var(--v-live-ring); }
+.h-demodot::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--v-live); animation: h-demo-ping 2.2s var(--h-ease) infinite; }
+@keyframes h-demo-ping { 0% { transform: scale(1); opacity: 0.55; } 70%, 100% { transform: scale(2.8); opacity: 0; } }
+.h-demobtn {
+  display: inline-flex; align-items: center; gap: 14px; min-height: 56px; padding: 8px 22px 8px 20px; border-radius: 999px;
+  color: var(--navy); background: #fff; box-shadow: inset 0 0 0 1px var(--v-line-2), 0 10px 24px -18px rgba(0, 30, 50, 0.35);
+  transition: transform 0.3s var(--h-ease), box-shadow 0.3s;
+}
+.h-demobtn:hover { transform: translateY(-1px); box-shadow: inset 0 0 0 1px rgba(31, 155, 110, 0.45), 0 14px 28px -18px rgba(0, 30, 50, 0.4); }
+.h-demobtn-txt { display: flex; flex-direction: column; line-height: 1.15; text-align: left; }
+.h-demobtn-txt b { font-size: 15.5px; font-weight: 650; letter-spacing: -0.01em; }
+.h-demobtn-txt small { margin-top: 3px; font-size: 12.5px; font-weight: 520; color: var(--v-soft); }
+.h-demobtn > svg { flex: none; }
+.h-demopill {
+  flex: none; display: inline-flex; align-items: center; gap: 9px; height: 40px; padding: 0 15px 0 13px; border-radius: 999px;
+  font-size: 13.5px; font-weight: 650; color: var(--navy); background: #fff; white-space: nowrap;
+  box-shadow: inset 0 0 0 1px rgba(31, 155, 110, 0.35), 0 6px 14px -10px rgba(0, 30, 50, 0.4); transition: box-shadow 0.25s;
+}
+.h-demopill:hover { box-shadow: inset 0 0 0 1px rgba(31, 155, 110, 0.7), 0 8px 18px -10px rgba(0, 30, 50, 0.45); }
+.h-demopill-short { display: none; }
+.h-menu .h-menupanel .h-menudemo { margin-top: 6px; min-height: 52px; justify-content: center; padding: 0 20px; }
+.h-reqdemo { margin-top: clamp(28px, 3.4vw, 40px); padding: 18px 20px; border-radius: 20px; background: #fff; box-shadow: var(--v-edge), var(--v-shadow); display: flex; flex-direction: column; gap: 6px; }
+.h-reqdemo b { color: var(--navy); font-size: 16px; }
+.h-reqdemo span { color: var(--v-text); font-size: 14.5px; line-height: 1.55; }
+.h-reqdemo .h-demobtn { align-self: flex-start; margin-top: 8px; }
+@media (max-width: 640px) {
+  .h-demopill { height: 38px; padding: 0 12px 0 11px; font-size: 13px; }
+}
+@media (max-width: 400px) {
+  .h-demopill-long { display: none; }
+  .h-demopill-short { display: inline; }
+}
+@media (prefers-reduced-motion: reduce) { .h-demodot::after { animation: none; display: none; } }

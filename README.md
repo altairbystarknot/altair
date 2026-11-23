@@ -3,6 +3,7 @@
 </a>
 
 <p align="center">
+  <a href="https://altair-lite.vercel.app"><img src=".github/readme/btn-lite.svg" height="44" alt="Try it free: Altair Lite"></a>
   <a href="https://altair-hub.vercel.app"><img src=".github/readme/btn-site.svg" height="44" alt="Product site: altair-hub.vercel.app"></a>
   <a href="https://altair-demo.vercel.app"><img src=".github/readme/btn-demo.svg" height="44" alt="Live demo business: altair-demo.vercel.app"></a>
   <a href="https://youtu.be/c6Wl3vk9zDI"><img src=".github/readme/btn-video.svg" height="44" alt="Watch the demo"></a>
@@ -17,10 +18,27 @@
   dos motores de precios, un panel para el equipo y un conector seguro para operar el negocio desde su propio Claude.</sub>
 </p>
 
+<a href="https://altair-lite.vercel.app">
+  <img src=".github/readme/lite.svg" width="100%" alt="Try it free: Altair Lite. Open a demo tourism business, connect it to your own Claude in one minute and watch the panel change live. Free, no sign-up, open source (MIT).">
+</a>
+
 > [!TIP]
-> **Try the idea with your own Claude in one minute:** [Altair Lite](https://altair-lite.vercel.app) is an open (MIT) demo
-> of a small tourism business you run from Claude, with a live panel and sample data
-> ([code](https://github.com/altairbystarknot/altair-lite)).
+> **This is where you can try it, for free.** This repository is the full product, which needs Starknot's private core to
+> run. **[Altair Lite](https://altair-lite.vercel.app)** is the open demo anyone can use right now: no sign-up, no keys,
+> sample data, your own Claude. Code: [altairbystarknot/altair-lite](https://github.com/altairbystarknot/altair-lite) (MIT).
+
+## Try it free in one minute
+
+| | |
+|---|---|
+| **1 · Open a sandbox** | Go to **[altair-lite.vercel.app](https://altair-lite.vercel.app)** and open your own copy of a demo tourism business. |
+| **2 · Add it to Claude** | Copy the connector URL from the panel into **Claude → Settings → Connectors → Add custom connector**. |
+| **3 · Ask and watch** | Ask *"What's on tomorrow, and who still needs a driver?"* or *"Raise Van rates 10% as a draft"*, and watch the panel change live. |
+
+<p align="center">
+  <a href="https://altair-lite.vercel.app"><img src=".github/readme/btn-lite.svg" height="44" alt="Try it free: Altair Lite"></a>
+</p>
+<p align="center"><sub>Pruébelo gratis con su propio Claude: <a href="https://altair-lite.vercel.app">altair-lite.vercel.app</a> · sin registro · datos de ejemplo · código abierto en <a href="https://github.com/altairbystarknot/altair-lite">altairbystarknot/altair-lite</a></sub></p>
 
 <p align="center"><sub><b>Experimental product</b> built for the Dojo AI Hackathon 2026 · <a href="#an-experimental-product">what that means</a> · custom software for real operations at <a href="https://www.starknot.co/en/contacto">starknot.co</a></sub></p>
 
@@ -86,11 +104,11 @@ Everything that differs between businesses is **data, not code**: languages, cur
 
 | | |
 |---|---|
+| **Altair Lite: try it free with your own Claude** (open demo, no sign-up, MIT) | **https://altair-lite.vercel.app** · [code](https://github.com/altairbystarknot/altair-lite) |
 | Altair (product site, request form) | https://altair-hub.vercel.app |
 | Demo business "Costa Brisa (demo)", sample data | https://altair-demo.vercel.app |
 | Demo panel | https://altair-demo.vercel.app/login (judge access is in the hackathon submission) |
 | Claude connector | `https://altair-demo.vercel.app/mcp` |
-| Altair Lite (open demo, connect your Claude, no sign-in) | https://altair-lite.vercel.app · [code](https://github.com/altairbystarknot/altair-lite) |
 
 Hackathon notes (state before the event and what was built during it): [HACKATHON.md](HACKATHON.md).
 
@@ -125,7 +143,7 @@ For a serious operation or an established company, Starknot builds **custom soft
 <p align="center"><sub>Free · by video call · <a href="https://www.starknot.co/es/contacto">en español</a> · <a href="https://www.starknot.co/en/contacto">in English</a></sub></p>
 
 > [!IMPORTANT]
-> **Proprietary software, published for evaluation only** (see [LICENSE](LICENSE)). The private core is available only under a commercial agreement with [Starknot](https://www.starknot.co/en). Without it this repository does not build; use the live demo to try Altair.
+> **Proprietary software, published for evaluation only** (see [LICENSE](LICENSE)). The private core is available only under a commercial agreement with [Starknot](https://www.starknot.co/en). Without it this repository does not build; to try Altair, use [Altair Lite](https://altair-lite.vercel.app) (free, with your own Claude) or the live demo business.
 
 <img src=".github/readme/divider.svg" width="100%" alt="">
 

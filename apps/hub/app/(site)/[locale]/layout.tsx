@@ -5,6 +5,7 @@ import "../../globals.css";
 import { fontClasses } from "../../fonts";
 import { HubFooter } from "../../_components/site-footer";
 import { HubNav } from "../../_components/nav";
+import { LITE_URL } from "../../_components/demo-button";
 import { Ambient } from "../../_components/fx/ambient";
 import { SmoothScroll } from "../../_components/fx/smooth-scroll";
 import { dict, href, isLocale, LOCALES } from "../../_i18n/copy";
@@ -55,6 +56,7 @@ export default async function SiteLayout({ children, params }: Params & { childr
             { href: href(locale, "story"), label: t.nav.story },
           ]}
           cta={{ href: href(locale, "request"), label: t.nav.cta }}
+          demo={{ href: LITE_URL, label: t.demo.nav, short: t.demo.navShort, full: t.demo.cta, aria: t.demo.label }}
         />
         <main id="main">{children}</main>
         <HubFooter locale={locale} />

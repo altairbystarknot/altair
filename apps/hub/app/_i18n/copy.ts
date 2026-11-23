@@ -63,6 +63,16 @@ const es = {
     sampleNote: "Datos de ejemplo",
     optional: "opcional",
   },
+  // The free, open demo (Altair Lite), offered beside every request button.
+  demo: {
+    cta: "Probar la demo gratis",
+    caption: "Sin registro · con su propio Claude",
+    nav: "Demo gratis",
+    navShort: "Demo",
+    label: "Probar la demo gratis de Altair (Altair Lite), se abre en una pestaña nueva",
+    first: "¿Prefiere probarlo antes de solicitarlo?",
+    firstText: "Abra un negocio de ejemplo, conéctelo a su Claude en un minuto y vea en el panel lo que Claude hace.",
+  },
   film: {
     play: "Ver el video",
     length: "2 min 22 s",
@@ -604,6 +614,15 @@ const en: Dict = {
     example: "Example",
     sampleNote: "Sample data",
     optional: "optional",
+  },
+  demo: {
+    cta: "Try the free demo",
+    caption: "No sign-up · with your own Claude",
+    nav: "Free demo",
+    navShort: "Demo",
+    label: "Try Altair's free demo (Altair Lite), opens in a new tab",
+    first: "Rather try it before you request it?",
+    firstText: "Open a sample business, connect it to your Claude in a minute and watch the panel show what Claude does.",
   },
   film: {
     play: "Watch the film",

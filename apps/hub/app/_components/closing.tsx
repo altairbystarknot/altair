@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Icon } from "@altair/ui";
 import { dict, href, type Locale } from "../_i18n/copy";
+import { DemoButton, LITE_URL } from "./demo-button";
 import { Rich } from "./rich";
 import { Star } from "./star";
 
@@ -19,7 +20,7 @@ export function ExperimentalNotice({ locale }: { locale: Locale }) {
         <div className="h-exp-lite">
           <b>{e.liteTitle}</b>
           <span>{e.liteText}</span>
-          <a className="h-glassbtn" href="https://altair-lite.vercel.app" target="_blank" rel="noopener noreferrer">
+          <a className="h-glassbtn" href={LITE_URL} target="_blank" rel="noopener noreferrer">
             {e.liteCta} <Icon name="arrowRight" size={16} />
           </a>
         </div>
@@ -53,6 +54,7 @@ export function Closing({ locale }: { locale: Locale }) {
             <Link className="btn tint lg" href={href(locale, "request")}>
               {t.common.request} <Icon name="arrowRight" size={18} />
             </Link>
+            <DemoButton locale={locale} />
           </div>
         </div>
         <ExperimentalNotice locale={locale} />

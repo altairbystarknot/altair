@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AltairLogo } from "@altair/ui";
 import { dict, href, type Locale } from "../_i18n/copy";
+import { LITE_URL } from "./demo-button";
 import { STARKNOT_URL } from "./links";
 
 /** The site footer: the wordmark, the pages, the language and "Altair by Starknot". No console link. */
@@ -33,6 +34,7 @@ export function HubFooter({ locale }: { locale: Locale }) {
             <h2>{t.footer.start}</h2>
             <ul>
               <li><Link href={href(locale, "request")}>{t.common.request}</Link></li>
+              <li><a href={LITE_URL} target="_blank" rel="noopener noreferrer">{t.demo.cta}</a></li>
               <li><Link href={href(locale, "how", "#preguntas")}>{t.footer.faq}</Link></li>
             </ul>
           </div>

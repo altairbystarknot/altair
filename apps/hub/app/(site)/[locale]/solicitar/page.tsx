@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Icon } from "@altair/ui";
+import { DemoButton } from "../../../_components/demo-button";
 import { Rich } from "../../../_components/rich";
 import { Star } from "../../../_components/star";
 import { dict, href, isLocale } from "../../../_i18n/copy";
@@ -39,6 +40,11 @@ export default async function RequestPage({ params, searchParams }: Params) {
               </li>
             ))}
           </ol>
+          <div className="h-reqdemo">
+            <b>{t.demo.first}</b>
+            <span>{t.demo.firstText}</span>
+            <DemoButton locale={locale} />
+          </div>
           <p className="h-exp-short">
             <span className="h-exp-dot" aria-hidden="true" />
             {t.experimental.short} <a href={t.experimental.url} target="_blank" rel="noopener noreferrer">{t.experimental.shortLink}</a>.

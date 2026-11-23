@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { locale as rootLocale } from "next/root-params";
 import { Icon } from "@altair/ui";
+import { DemoButton } from "../../_components/demo-button";
 import { Rich } from "../../_components/rich";
 import { dict, href, isLocale } from "../../_i18n/copy";
 
@@ -16,6 +17,7 @@ export default async function NotFound() {
         <p className="h-lede">{t.notFound.text}</p>
         <div className="h-actions">
           <Link className="btn tint lg" href={href(locale, "home")}>{t.notFound.home}</Link>
+          <DemoButton locale={locale} />
           <Link className="h-arrow" href={href(locale, "request")}>{t.common.request} <Icon name="arrowRight" size={16} /></Link>
         </div>
       </div>
