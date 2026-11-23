@@ -65,9 +65,9 @@ const es = {
   },
   film: {
     play: "Ver el video",
-    length: "58 s",
-    label: "Video de presentación de Altair by Starknot",
-    note: "Video de presentación · narrado en inglés",
+    length: "2 min 22 s",
+    label: "Video demo de Altair by Starknot",
+    note: "Video demo · narrado en inglés · datos de ejemplo",
   },
   shots: {
     siteHome: { alt: "Página de inicio del sitio de reservas de un negocio de ejemplo", url: "reservas.su-negocio.com", caption: "Sitio de reservas · inicio" },
@@ -188,8 +188,8 @@ const es = {
       link: "Cómo funciona con Claude",
     },
     film: {
-      kicker: "En un minuto",
-      title: "Conozca Altair *en 58 segundos.*",
+      kicker: "En dos minutos",
+      title: "Conozca Altair *en poco más de dos minutos.*",
     },
     steps: {
       kicker: "Cómo empezar",
@@ -607,9 +607,9 @@ const en: Dict = {
   },
   film: {
     play: "Watch the film",
-    length: "58 s",
-    label: "Altair by Starknot introduction film",
-    note: "Introduction film · narrated in English",
+    length: "2 min 22 s",
+    label: "Altair by Starknot demo film",
+    note: "Demo film · narrated in English · sample data",
   },
   shots: {
     siteHome: { alt: "Home page of the booking site of a sample business", url: "booking.your-business.com", caption: "Booking site · home" },
@@ -730,8 +730,8 @@ const en: Dict = {
       link: "How it works with Claude",
     },
     film: {
-      kicker: "In one minute",
-      title: "Meet Altair *in 58 seconds.*",
+      kicker: "In two minutes",
+      title: "Meet Altair *in just over two minutes.*",
     },
     steps: {
       kicker: "Getting started",

@@ -13,8 +13,8 @@ export function Film({ play, length, label, note }: FilmProps) {
       <div className="h-film-frame">
         <video
           ref={v}
-          src="/media/altair.mp4"
-          poster="/media/altair-poster.jpg"
+          src="/media/altair-demo.mp4"
+          poster="/media/altair-demo-poster.jpg"
           width={1280}
           height={720}
           preload="none"
