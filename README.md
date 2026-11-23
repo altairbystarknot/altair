@@ -27,13 +27,14 @@
 > run. **[Altair Lite](https://altair-lite.vercel.app)** is the open demo anyone can use right now: no sign-up, no keys,
 > sample data, your own Claude. Code: [altairbystarknot/altair-lite](https://github.com/altairbystarknot/altair-lite) (MIT).
 
-## Try it free in one minute
+## Try it free in a few minutes
 
 | | |
 |---|---|
-| **1 · Open a sandbox** | Go to **[altair-lite.vercel.app](https://altair-lite.vercel.app)** and open your own copy of a demo tourism business. |
-| **2 · Add it to Claude** | Copy the connector URL from the panel into **Claude → Settings → Connectors → Add custom connector**. |
-| **3 · Ask and watch** | Ask *"What's on tomorrow, and who still needs a driver?"* or *"Raise Van rates 10% as a draft"*, and watch the panel change live. |
+| **1 · Make it yours** | Go to **[altair-lite.vercel.app](https://altair-lite.vercel.app)** → *Set up my business*: your name, logo and colors, your rates straight from **Excel or CSV**, your tours and drivers. Or explore the sample business as it is. |
+| **2 · Add it to Claude** | Copy the connector URL from the panel into **Claude → Settings → Connectors → Add custom connector**. Claude can even finish the setup: share your rate sheet in the chat and it loads it as a draft you approve. |
+| **3 · Take a booking** | Open your own **booking page** (your logo, routes, prices and tours) and request a transfer: it lands in the panel within seconds. |
+| **4 · Ask and watch** | Ask *"What's on tomorrow, and who still needs a driver?"* or *"Raise Van rates 10% as a draft"*, and watch the panel change live. |
 
 <p align="center">
   <a href="https://altair-lite.vercel.app"><img src=".github/readme/btn-lite.svg" height="44" alt="Try it free: Altair Lite"></a>
