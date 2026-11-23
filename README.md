@@ -17,6 +17,11 @@
   dos motores de precios, un panel para el equipo y un conector seguro para operar el negocio desde su propio Claude.</sub>
 </p>
 
+> [!TIP]
+> **Try the idea with your own Claude in one minute:** [Altair Lite](https://altair-lite.vercel.app) is an open (MIT) demo
+> of a small tourism business you run from Claude, with a live panel and sample data
+> ([code](https://github.com/altairbystarknot/altair-lite)).
+
 <p align="center"><sub><b>Experimental product</b> built for the Dojo AI Hackathon 2026 · <a href="#an-experimental-product">what that means</a> · custom software for real operations at <a href="https://www.starknot.co/en/contacto">starknot.co</a></sub></p>
 
 <img src=".github/readme/divider.svg" width="100%" alt="">
@@ -85,6 +90,7 @@ Everything that differs between businesses is **data, not code**: languages, cur
 | Demo business "Costa Brisa (demo)", sample data | https://altair-demo.vercel.app |
 | Demo panel | https://altair-demo.vercel.app/login (judge access is in the hackathon submission) |
 | Claude connector | `https://altair-demo.vercel.app/mcp` |
+| Altair Lite (open demo, connect your Claude, no sign-in) | https://altair-lite.vercel.app · [code](https://github.com/altairbystarknot/altair-lite) |
 
 Hackathon notes (state before the event and what was built during it): [HACKATHON.md](HACKATHON.md).
 

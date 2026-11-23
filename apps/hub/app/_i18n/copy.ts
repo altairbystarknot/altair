@@ -131,6 +131,9 @@ const es = {
     url: "https://www.starknot.co/es/contacto",
     short: "Altair es un producto experimental. Si necesita un sistema a medida para su empresa,",
     shortLink: "agende una sesión de descubrimiento gratis en starknot.co",
+    liteTitle: "¿Quiere probar la idea ya, con su propio Claude?",
+    liteText: "Altair Lite es un demo abierto: un negocio de ejemplo que usted conecta a Claude en un minuto, sin registrarse, con un panel que muestra en vivo lo que Claude hace.",
+    liteCta: "Abrir Altair Lite",
   },
   home: {
     hero: {
@@ -670,6 +673,9 @@ const en: Dict = {
     url: "https://www.starknot.co/en/contacto",
     short: "Altair is an experimental product. If you need custom software for your company,",
     shortLink: "book a free discovery session on starknot.co",
+    liteTitle: "Want to try the idea now, with your own Claude?",
+    liteText: "Altair Lite is an open demo: a sample business you connect to Claude in a minute, with no sign-up, and a panel that shows what Claude does as it happens.",
+    liteCta: "Open Altair Lite",
   },
   home: {
     hero: {

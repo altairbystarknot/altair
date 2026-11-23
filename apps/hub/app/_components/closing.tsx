@@ -16,6 +16,13 @@ export function ExperimentalNotice({ locale }: { locale: Locale }) {
         <p className="h-kicker"><span className="h-exp-dot" aria-hidden="true" />{e.kicker}</p>
         <h2 id="h-exp-title" className="h-h3"><Rich t={e.title} /></h2>
         <p>{e.text}</p>
+        <div className="h-exp-lite">
+          <b>{e.liteTitle}</b>
+          <span>{e.liteText}</span>
+          <a className="h-glassbtn" href="https://altair-lite.vercel.app" target="_blank" rel="noopener noreferrer">
+            {e.liteCta} <Icon name="arrowRight" size={16} />
+          </a>
+        </div>
       </div>
       <div className="h-exp-b">
         <h3 className="h-h3">{e.customTitle}</h3>
